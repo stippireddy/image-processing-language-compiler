@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-This is an academic project that I have done for the Programming Language Principles course at the University of Florida. 
+This is an academic project that I have done for the Programming Language Principles course at the University of Florida. The grammar rules for the project can be found in the specifications folder.
 
 ## Installation
 
