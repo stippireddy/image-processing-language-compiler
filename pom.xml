@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>my.imageprocessinglanguage.compiler</groupId>
+	<artifactId>ImageProcessingLanguageCompiler</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ImageProcessingLanguageCompiler</name>
+	<description>This compiler compiles a given input program which conforms to a given grammar into the equivalent Java ByteCode.</description>
+	<dependencies>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
