@@ -7,17 +7,19 @@
 	<name>ImageProcessingLanguageCompiler</name>
 	<description>This compiler compiles a given input program which conforms to a given grammar into the equivalent Java ByteCode.</description>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
 		<dependency>
-			<groupId>asm</groupId>
-			<artifactId>asm</artifactId>
-			<version>3.3.1</version>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm-all</artifactId>
+			<version>5.2</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.11</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 </project>
