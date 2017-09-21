@@ -4,22 +4,22 @@ import cop5556sp17.Scanner.Token;
 import cop5556sp17.AST.Type.TypeName;
 
 public abstract class Expression extends ASTNode {
-	
-	public TypeName typeName;
 
-	protected Expression(Token firstToken) {
-		super(firstToken);
-	}
+  public TypeName typeName;
 
-	@Override
-	abstract public Object visit(ASTVisitor v, Object arg) throws Exception;
+  protected Expression(Token firstToken) {
+    super(firstToken);
+  }
 
-	public TypeName getType() {
-		return typeName;
-	}
+  @Override
+  abstract public Object visit(ASTVisitor v, Object arg) throws Exception;
 
-	public void setType(TypeName typeName) {
-		this.typeName = typeName;
-	}
+  public TypeName getType() {
+    return typeName;
+  }
+
+  public void setType(TypeName typeName) {
+    this.typeName = typeName;
+  }
 
 }

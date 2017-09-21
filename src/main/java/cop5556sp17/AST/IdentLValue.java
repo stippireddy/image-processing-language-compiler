@@ -4,43 +4,43 @@ import cop5556sp17.Scanner.Token;
 import cop5556sp17.AST.Type.TypeName;
 
 public class IdentLValue extends ASTNode {
-	
-	public Dec dec;
 
-	private TypeName typeName;
+  public Dec dec;
 
-	public IdentLValue(Token firstToken) {
-		super(firstToken);
-	}
-	
-	@Override
-	public String toString() {
-		return "IdentLValue [firstToken=" + firstToken + "]";
-	}
+  private TypeName typeName;
 
-	@Override
-	public Object visit(ASTVisitor v, Object arg) throws Exception {
-		return v.visitIdentLValue(this,arg);
-	}
+  public IdentLValue(Token firstToken) {
+    super(firstToken);
+  }
 
-	public String getText() {
-		return firstToken.getText();
-	}
+  @Override
+  public String toString() {
+    return "IdentLValue [firstToken=" + firstToken + "]";
+  }
 
-	public Dec getDec() {
-		return dec;
-	}
+  @Override
+  public Object visit(ASTVisitor v, Object arg) throws Exception {
+    return v.visitIdentLValue(this, arg);
+  }
 
-	public void setDec(Dec dec) {
-		this.dec = dec;
-	}
+  public String getText() {
+    return firstToken.getText();
+  }
 
-	public TypeName getType() {
-		return typeName;
-	}
+  public Dec getDec() {
+    return dec;
+  }
 
-	public void setType(TypeName typeName) {
-		this.typeName = typeName;
-	}
+  public void setDec(Dec dec) {
+    this.dec = dec;
+  }
+
+  public TypeName getType() {
+    return typeName;
+  }
+
+  public void setType(TypeName typeName) {
+    this.typeName = typeName;
+  }
 
 }

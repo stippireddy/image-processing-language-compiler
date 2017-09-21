@@ -5,18 +5,18 @@ import cop5556sp17.AST.Type.TypeName;
 
 
 public abstract class Chain extends Statement {
-	
-	private TypeName typeName;
 
-	public Chain(Token firstToken) {
-		super(firstToken);
-	}
+  private TypeName typeName;
 
-	public TypeName getType() {
-		return typeName;
-	}
+  public Chain(Token firstToken) {
+    super(firstToken);
+  }
 
-	public void setType(TypeName typeName) {
-		this.typeName = typeName;
-	}
+  public TypeName getType() {
+    return typeName;
+  }
+
+  public void setType(TypeName typeName) {
+    this.typeName = typeName;
+  }
 }
