@@ -91,24 +91,6 @@ public class CodeGenUtils {
     return (Runnable) constructor.newInstance(args);
   }
 
-  // /**
-  // * Generates code to print the given String.
-  // * IF !GEN, does not generate code.
-  // * Used to allow observation of execution of generated program
-  // * during development and grading.
-  // *
-  // * @param mv
-  // * @param message
-  // */
-  // public static void genPrint(boolean GEN, MethodVisitor mv, String message) {
-  // if(GEN){
-  // mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-  // mv.visitLdcInsn(message);
-  // mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "print",
-  // "(Ljava/lang/String;)V", false);
-  // }
-  // }
-
   /**
    * Generates code to print the given String. IF !GEN, does not generate code. Used to allow
    * observation of execution of generated program during development and grading.
@@ -118,8 +100,6 @@ public class CodeGenUtils {
    */
   public static void genPrint(boolean GEN, MethodVisitor mv, String message) {
     if (GEN) {
-      // mv.visitFieldInsn(Opcodes.GETSTATIC, "cop5556sp17/PLPRuntimeLog", "globalLog",
-      // "Lcop5556sp17/PLPRuntimeLog;");
       mv.visitLdcInsn(message);
       mv.visitMethodInsn(Opcodes.INVOKESTATIC, "cop5556sp17/PLPRuntimeLog", "globalLogAddEntry",
           "(Ljava/lang/String;)V", false);
@@ -140,13 +120,8 @@ public class CodeGenUtils {
    */
   public static void genPrintTOS(boolean GEN, MethodVisitor mv, TypeName type) {
     if (GEN) {
-      // mv.visitInsn(Opcodes.DUP);
-      // mv.visitFieldInsn(Opcodes.GETSTATIC, "cop5556sp17/PLPRuntimeLog", "globalLog",
-      // "Lcop5556sp17/PLPRuntimeLog;");
-      // mv.visitInsn(Opcodes.SWAP);
       switch (type) {
         case INTEGER: {
-
           mv.visitInsn(Opcodes.DUP);
           mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/Integer", "toString",
               "(I)Ljava/lang/String;", false);
